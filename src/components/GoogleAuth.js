@@ -4,8 +4,8 @@ class GoogleAuth extends React.Component {
 
   state = {
     isSignedIn: null,
-    // userId:null,
-    // userName:null
+    userId:null,
+    userName:null
   };
 
   componentDidMount() {
@@ -31,14 +31,14 @@ class GoogleAuth extends React.Component {
     if (isSignedIn) {
       this.setState({
         isSignedIn:this.auth.isSignedIn.get(),
-        // userId:this.auth.currentUser.get().getId(),
-        // userName:this.auth.currentUser.get().Ot.Cd
+        userId:this.auth.currentUser.get().getId(),
+        userName:this.auth.currentUser.get().Ot.Cd
       })
     } else {
         this.setState({
           isSignedIn:this.auth.isSignedIn.get(),
-          // userId:null,
-          // userName:null
+          userId:null,
+          userName:null
         })
     }
   }
@@ -66,8 +66,8 @@ class GoogleAuth extends React.Component {
     await this.auth.signIn();
     this.setState({
       isSignedIn:this.auth.isSignedIn.get(),
-      // userId:this.auth.currentUser.get().getId(),
-      // userName:this.auth.currentUser.get().Ot.Cd || ''
+      userId:this.auth.currentUser.get().getId(),
+      userName:this.auth.currentUser.get().Ot.Cd || ''
     })
   }
 
@@ -76,8 +76,8 @@ class GoogleAuth extends React.Component {
     this.auth.signOut();
     this.setState({
       isSignedIn:this.auth.isSignedIn.get(),
-      // userId:null,
-      // userName:null
+      userId:null,
+      userName:null
     })
 
   }

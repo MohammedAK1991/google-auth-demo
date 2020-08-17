@@ -2,7 +2,7 @@
 
 ## Steps to Follow
 
-1. use command npx-create-react-app your_app_name to create a frontend build pipeline.
+1. use command npx create react app {your_app_name} to create a frontend build pipeline.
 2. Delete all unnecessary files and add a components folder to the src folder.
 3. Create a NavBar component and GoogleAuth component in the components folder.
 
