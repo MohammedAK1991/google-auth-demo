@@ -14,7 +14,8 @@
    - Inside the GOogleAuth component, initialize the Google AUth library with the OAuth CLient ID
    - Make sure the lib gets called any time the user clicks on the 'Login with Google' button.
 
-4. Add a link tag <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"> anywhere inside the <head> This is to install semantic ui.
+4. Add a link tag
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"> anywhere inside the <head> This is to install semantic ui.
 
 **NOTE**
 Alternatively, You may also use the conrresponding npm install commands to install GoogleOauth and semantic ui via the command line.
