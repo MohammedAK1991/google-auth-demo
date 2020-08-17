@@ -8,16 +8,15 @@
 2. Delete all unnecessary files and add a components folder to the src folder.
 
 3) Steps for setting up OAuth
-   ⋅⋅\* Create a new project at console.developers.google.com
-   4)Setup an Oauth confirmation screen
+   - Create a new project at console.developers.google.com
+     4)Setup an Oauth confirmation screen
 4) Generate an OAuth Client ID.
    Install Google's API library, initialize it with the OAuth CLient ID
 5) Make sure the lib gets called any time the suer clicks on the 'Login with Google' button.
 
 3. Open index.html in the public folder.
 
-4) Add ```javascript
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"> anywhere inside the <head> to import it via CDN.
+4) Add <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"> anywhere inside the <head> to import it via CDN. This is to install semantic ui.
 5) Add <script src="https://apis.google.com/js/api.js"></script> anywhere inside the <head>. This is for
 
 3. Open App.js and delete the code inside and replace it with the one as shown in the file.
