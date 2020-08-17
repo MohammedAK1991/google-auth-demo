@@ -1,7 +1,5 @@
 # HOW TO ADD AUTHENTICATION TO YOUR REACT APP WITH GOOGLE-AUTH2
 
----
-
 ## Steps to Follow
 
 1. use command npx-create-react-app your_app_name to create a frontend build pipeline.
@@ -13,7 +11,7 @@
    - Setup an Oauth confirmation screen
    - Generate an OAuth Client ID.
    - Add a script tag <script src="https://apis.google.com/js/api.js"></script> anywhere inside the <head> of index.html to load the Google APIs platfrom library.
-   - Install Google's API library, initialize it with the OAuth CLient ID
+   - Inside the GOogleAuth component, initialize the Google AUth library with the OAuth CLient ID
    - Make sure the lib gets called any time the user clicks on the 'Login with Google' button.
 
 4. Add a link tag : <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"> anywhere inside the <head> to import it via CDN. This is to install semantic ui.
