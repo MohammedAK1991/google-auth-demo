@@ -4,39 +4,42 @@ class GoogleAuth extends React.Component {
 
   state = {
     isSignedIn: null,
-    userId:null,
-    userName:null
+    // userId:null,
+    // userName:null
   };
 
   componentDidMount() {
-    window.gapi.load('client:auth2', ()=> {
+
+    window.gapi.load('client:auth2', () => {
       window.gapi.client.init({
-        clientId: '176907200640-moopicdqra2b703hb4skd0khu9ock7d6.apps.googleusercontent.com',
+        clientId: '702101659901-g1ppdkvgmftdg80cua8otbbln0gaomab.apps.googleusercontent.com',
         scope: 'email'
-      }).then(()=> {
+      })
+      .then(()=> {
+        //saving reference to auth object
         this.auth = window.gapi.auth2.getAuthInstance();
 
-        this.setState({ isSignedIn : this.auth.isSignedIn.get()});
-        this.onAuthChange(this.auth.isSignedIn.get())
+        //setting up an event listener to which we can pass a callback function which will be called anytime the users authentication sttaus changes
         this.auth.isSignedIn.listen(this.onAuthChange);
+        this.onAuthChange(this.auth.isSignedIn.get())
       })
     });
   }
 
-  onAuthChange = (isSignedIn) => {
-    if(isSignedIn) {
 
+  onAuthChange = (isSignedIn) => {
+    if (isSignedIn) {
       this.setState({
         isSignedIn:this.auth.isSignedIn.get(),
-        userId:this.auth.currentUser.get().getId(),
-        userName:this.auth.currentUser.get().Ot.Cd
+        // userId:this.auth.currentUser.get().getId(),
+        // userName:this.auth.currentUser.get().Ot.Cd
       })
     } else {
-      this.setState({
-        isSignedIn:this.auth.isSignedIn.get(),
-        userId:null,
-        userName:null
-      })
+        this.setState({
+          isSignedIn:this.auth.isSignedIn.get(),
+          // userId:null,
+          // userName:null
+        })
     }
   }
 
@@ -44,39 +47,37 @@ class GoogleAuth extends React.Component {
     if (this.state.isSignedIn == null ) {
       return null;
     } else if (this.state.isSignedIn) {
-      return (
+        return (
           <button onClick={this.onSignOutClick} className="ui red google button ">
-
             Sign Out
-        </button>
-      )
+          </button>
+        )
     } else {
-      return (
+        return (
           <button onClick={this.onSignInClick} className="ui blue google button ">
-
             Sign In with Google
           </button>
-      )
+        )
     }
   }
 
   onSignInClick = async () => {
-    console.log('signed in')
+
     await this.auth.signIn();
     this.setState({
       isSignedIn:this.auth.isSignedIn.get(),
-      userId:this.auth.currentUser.get().getId(),
-      userName:this.auth.currentUser.get().Ot.Cd || ''
+      // userId:this.auth.currentUser.get().getId(),
+      // userName:this.auth.currentUser.get().Ot.Cd || ''
     })
   }
 
   onSignOutClick = () => {
-    console.log('signed out');
+
     this.auth.signOut();
     this.setState({
       isSignedIn:this.auth.isSignedIn.get(),
-      userId:null,
-      userName:null
+      // userId:null,
+      // userName:null
     })
 
   }
