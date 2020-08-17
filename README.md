@@ -10,8 +10,8 @@
    - Create a new project at [console.developers.google.com](https://console.developers.google.com)
    - Setup an Oauth confirmation screen
    - Generate an OAuth Client ID.
-   - Add a script tag : <script src="https://apis.google.com/js/api.js"></script> anywhere inside the <head> of index.html to load the Google APIs platfrom library.
-   - Inside the GoogleAuth component, initialize the Google AUth library with the OAuth CLient ID
+   - Add a script tag : <script src="https://apis.google.com/js/api.js"></script> anywhere inside the head of index.html to load the Google APIs platfrom library.
+   - Inside the GoogleAuth component, initialize the Google OAuth library with the OAuth CLient ID
    - Make sure the lib gets called any time the user clicks on the 'Login with Google' button.
 
 4. Add a link tag
@@ -26,7 +26,7 @@
 anywhere inside the <head> This is to install semantic ui.
 
 **NOTE**
-Alternatively, You may also use the conrresponding npm install commands to install GoogleOauth and semantic ui via the command line.
+Alternatively, You may also use the corresponding npm install commands to install GoogleOAuth and semantic ui via the command line.
 
 ## REFERENCES
 
